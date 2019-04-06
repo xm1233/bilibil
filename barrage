@@ -1,0 +1,14 @@
+import re
+import requests
+from bs4 import BeautifulSoup as bs 
+url='http://www.bilibili.com/video/av13950881/'
+html=requests.get(url).text
+cid=re.findall(r'cid=(.*?)&aid',html)
+hurl='https://comment.bilibili.com/'+str(cid)+'.xml'
+hhtml=requests.get(hurl).text
+soup=bs(hhtml,'xml')
+dmlist=soup.find_all('d')
+filename='av.txt'
+with open(filename,'w',encoding=('utf-8')) as t:
+    for dm in dmlist:
+        t.write(str(dm.string)+'\n')
