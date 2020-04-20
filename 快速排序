@@ -6,9 +6,10 @@ void quicksort(ElemType A[],int low,int high){
    quicksort(A,p+1,high);}}
 void quicksort1(ElemType A[],int low,int high){
   int key=A[low];
+  while(low<high){
   while(low<high&&A[high]>key)--high;//比key大继续从大到小寻找；
   A[low]=A[high];//比key小交换到枢轴左边；
   while(low<high&&A[low]<key)++low;//比key小继续从小到大寻找；
-  A[high]=A[high];//比key大交换到枢轴右边；
+  A[high]=A[low];//比key大交换到枢轴右边；}
   A[low]=key;
   return low;}
