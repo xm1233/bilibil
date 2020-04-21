@@ -1,0 +1,13 @@
+void InThread(BiTree &T,ThreadTree &pre){
+  if(T!=null)
+  {InThread(p->lchilid,pre);
+   if(p->lchild==null)//左子树为空，前驱节点为1，指向前驱结点
+   {p->lchild=pre;
+    p->ltag=1;}
+   if(pre!=null&&p->rchild==null)//右子树伟空，后继节点为1，指向后继节点
+   {p->rchild=T;
+    p->rtag=1;}
+    pre=T;//指向当前节点
+   InThread(p->rchild,pre);
+   }
+    
