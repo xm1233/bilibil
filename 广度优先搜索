@@ -1,0 +1,21 @@
+void BFSTraverse(Graph G){
+  for(i=0;i<G.vexnum;i++)
+    {visited[i]=False;}
+  InitQueue(Q);
+  for(i=0;i<G.vexnum;i++)
+    {if(!visited[i])
+        BFS(G,i);}
+        }
+void BFS(Graph G,int V)
+{visit(v);
+ visited[v]=True;
+ Enqueue(Q,v)
+ while(!Isempty(Q))
+ {DeQueue(Q,v);
+  for(w=Firstneighbor(G,v);w>=0;w=Nextneighbor(G,v,w))
+   {if(!visited[w])
+    {visit(w);
+     visited[w]=True;
+     EnQueue(Q,w);}
+     }
+    }
