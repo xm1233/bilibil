@@ -1,0 +1,8 @@
+void swap(Bitree bt){
+  if(bt){
+  swap(bt->lchild);
+  swap(bt->rchild);
+  temp=bt->lchild;
+  bt->lchild=bt->rchild;
+  bt->rchild=temp;}
+  }
