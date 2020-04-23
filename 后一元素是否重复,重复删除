@@ -1,0 +1,12 @@
+void Search(LinkList &L)
+{LinkNode *p=L->next,*q;
+ if(p->next==null)
+   return;
+ while(p->next){
+   q=p->next;
+   if(p->data==q->data)
+     {p->next=q->next;
+      free(q);}
+   else
+     p=p->next;}
+     }
