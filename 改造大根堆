@@ -1,0 +1,11 @@
+void sift(Sqlist *s){
+  int n=s->length;
+  int j=n;
+  int i=j/2;
+  S->R[0]=S->R[j];
+  while((i>=1)&&(S->R[0].key>S->R[i].key)){
+  S->R[j]=S->R[i];
+  j=i;
+  i=i/2;}
+  S->R[j]=S->R[0];
+  }
