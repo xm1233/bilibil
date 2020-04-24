@@ -1,0 +1,8 @@
+void Search(BiTree bt,int k){
+  int n=0;
+  if(bt!=null)n++;
+  while(bt&&k!=bt->data){
+  if(k>bt->data)bt=bt->rchild;
+  else bt=bt->lchild;
+  n++;}
+  }
