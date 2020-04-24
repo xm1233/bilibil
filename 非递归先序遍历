@@ -1,0 +1,12 @@
+void preorder(BiTree p){
+  InitStack[Maxsize];
+  int top=0;
+  while(bt){
+  p=Stack[top++];
+  visit(p);
+  if(p->rchild)
+  Stack[++top]=p->rchild;
+  if(p->lchild)
+  Stack[++top]=p->lchild;
+  }
+  }//栈后进先出，先序遍历根左右，左子树比右子树后进。
